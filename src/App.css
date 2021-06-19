@@ -114,3 +114,44 @@
   align-item : center;
   align-content: center;
 }
+.todo-enter {
+  opacity: 0.01;
+  
+  transform: translate(-40px, 0)
+}
+
+.todo-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1000ms ease-in;
+}
+
+.todo-exit {
+  opacity: 1;
+  transform: translate(0, 0)
+}
+
+.todo-exit-active {
+  opacity: 0.10;
+  transform: translate(40px, 0);
+  transition: all 1000ms ease-in;
+}
+.todo{
+  animation-name : todoanimation;
+  animation-duration : 1000ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-iteration-count: 1;
+
+}
+@keyframes todoanimation{
+  0%{
+    transform: translateX(-20px);
+  }
+  50%{
+    transform : translateX(-10px);
+  }
+  100%{
+    transform : translateX(0px);
+  }
+}
