@@ -1,7 +1,9 @@
 .App{
   text-align: center;
+ 
   margin : auto;
-  color : blue;
+  color : rgb(29, 140, 160);
+  margin-top : 10px;
   background : rgba(255, 0, 0, 0.37);
   width : 60%;
   border-radius : 20px;
