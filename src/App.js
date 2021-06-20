@@ -4,7 +4,9 @@ import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import React, { useState, useEffect } from 'react';
-
+import AppSample from './components/AppSample';
+import AppCSSTransition from './components/AppCSSTransition';
+import AppSwitchTransition from './components/AppSwithTransition';
 function App() {
   //! useState method.. whatever inside type of state variable [] means object
   const [inputText, setInputText] = useState("");
@@ -68,6 +70,10 @@ function App() {
       <Form filterer={filterer} inputText={inputText} setStatus={setStatus} setInputText={setInputText} setTodos={setTodos} todos={todos} />
 
       <TodoList status={status} inn={inn} todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} />
+      <AppSample />
+      <AppCSSTransition />  
+      <h2>Switch Transition with CSSTransition</h2>
+      <AppSwitchTransition/>  
     </div>
   );
 

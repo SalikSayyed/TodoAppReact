@@ -114,28 +114,6 @@
   align-item : center;
   align-content: center;
 }
-.todo-enter {
-  opacity: 0.01;
-  
-  transform: translate(-40px, 0)
-}
-
-.todo-enter-active {
-  opacity: 1;
-  transform: translate(0, 0);
-  transition: all 1000ms ease-in;
-}
-
-.todo-exit {
-  opacity: 1;
-  transform: translate(0, 0)
-}
-
-.todo-exit-active {
-  opacity: 0.10;
-  transform: translate(40px, 0);
-  transition: all 1000ms ease-in;
-}
 .todo{
   animation-name : todoanimation;
   animation-duration : 1000ms;
@@ -144,14 +122,95 @@
   animation-iteration-count: 1;
 
 }
-@keyframes todoanimation{
-  0%{
-    transform: translateX(-20px);
-  }
-  50%{
-    transform : translateX(-10px);
-  }
-  100%{
-    transform : translateX(0px);
-  }
+.todo-enter {
+  opacity: 0.01;
+  
+  transform: translate(-40px, 0);
+  transition : all 1000ms ease-in-out;
+}
+
+.todo-enter-active {
+  opacity: 0.10;
+  transform: translate(0, 0);
+  transition: all 1000ms ease-in-out;
+}
+.todo-enter-done{
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1000ms ease-in-out;
+}
+.todo-exit {
+  opacity: 0.50;
+  transform: translate(0, 0);
+  transition : all 1000ms ease-in-out;
+}
+
+.todo-exit-active {
+  opacity: 0.3;
+  transform: translate(40px, 0);
+  transition: all 1000ms ease-in-out;
+}
+.todo-exit-done{
+  opacity: 0.1;
+  transform: translate(0, 0);
+  transition: all 1000ms ease-in-out;
+}
+
+
+
+
+
+
+.ani-appear{
+
+}
+.ani-appear-active{
+
+}
+.ani-appear-done{
+
+}
+.ani-enter {
+  opacity: 0;
+  transition : opacty 300ms;
+}
+.ani-enter-active {
+  opacity: 0.5;
+  transition: opacity 300ms;
+}
+.ani-enter-done{
+  opacity : 1;
+  transition : opacity 300ms;
+}
+
+.ani-exit {
+  opacity: 1;
+}
+.ani-exit-active {
+  opacity: 0.5;
+  font-size  : 20px;
+  transition: opacity 300ms ,font-size  100ms;
+}
+.ani-exit-done {
+  opacity : 0;
+  font-size : 5px;
+  transition : opacity 300ms ,font-size 50ms;
+}
+
+
+.fade-enter{
+  opacity: 0;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-enter-active{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-exit-active{
+  transition: opacity 500ms;
 }
