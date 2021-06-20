@@ -70,10 +70,13 @@ function App() {
       <Form filterer={filterer} inputText={inputText} setStatus={setStatus} setInputText={setInputText} setTodos={setTodos} todos={todos} />
 
       <TodoList status={status} inn={inn} todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} />
+     {/*
       <AppSample />
       <AppCSSTransition />  
       <h2>Switch Transition with CSSTransition</h2>
-      <AppSwitchTransition/>  
+      <AppSwitchTransition/>
+
+     */}  
     </div>
   );
 
