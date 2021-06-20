@@ -35,7 +35,7 @@ const Todo = ({ todo, setTodos, todos, inn }) => {
         <CSSTransition key={todo.id} in={deleteStatus} classNames="ani" onExited={()=>{deleteHandler()}} timeout={300} unmountOnExit={true} mountOnEnter={true} >
             <div>
             <div className="todo ani">
-                <li className={`todo-items ${todo.completed ? "todo-completed" : ""}`}>{todo.text}</li>
+                <div className={`todo-items ${todo.completed ? "todo-completed" : ""}`}>{todo.text}</div>
                 <button className="complete-btn" onClick={completeHandler}>
                     <i className={`fas ${todo.completed ? 'fa-plus' : 'fa-check'} `}></i>
                 </button>

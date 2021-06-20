@@ -2,12 +2,24 @@
   text-align: center;
   margin : auto;
   color : blue;
+  background : rgba(255, 0, 0, 0.37);
+  width : 60%;
+  border-radius : 20px;
+  border-width: 2px;
+  border-color: blue;
+  border-style : solid;
+  padding-bottom: 5px;
+  box-shadow: 5px 5px 5px rgb(87, 68, 68);
+}
+#inputButton{
+  width : auto;margin : auto;
+  
 }
 .select{
-  display: 'inline';
-  width : 300px;
+  display: 'block';
+
   height : 30px;
-  max-width : 50px;
+ 
   flex : 2;
   margin-left : 5px;
 }
@@ -48,6 +60,8 @@
 .todo-items{
   flex : 4;
   max-height : 30px;
+  
+  transition  : all 300ms ease-in;
 }
 .complete-btn{
   flex : 1;
@@ -61,6 +75,8 @@
 .todo-completed{
   color : red;
   text-decoration : line-through;
+  background-color : cyan;
+  transition  : background-color 600ms ease-in-out;
 }
 
 .todo{
@@ -75,7 +91,8 @@
   justify-content : flex-start;
   margin-top: 5px;
   margin-bottom : 5px;
-  border : 2px blue solid;
+  border : 2px blue solid ;
+  border-radius : 5px;
 }
 
 .todo-list_{
